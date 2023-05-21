@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Source\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {}
+    "C:\\BuildProject\\IdentityServerProject\\IdentityServerAspNetIdentity.csproj": {}
   },
   "projects": {
-    "D:\\Source\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {
+    "C:\\BuildProject\\IdentityServerProject\\IdentityServerAspNetIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
+        "projectUniqueName": "C:\\BuildProject\\IdentityServerProject\\IdentityServerAspNetIdentity.csproj",
         "projectName": "IdentityServerAspNetIdentity",
-        "projectPath": "D:\\Source\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
-        "packagesPath": "C:\\Users\\HungDangHong\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\IdentityServerAspNetIdentity\\obj\\",
+        "projectPath": "C:\\BuildProject\\IdentityServerProject\\IdentityServerAspNetIdentity.csproj",
+        "packagesPath": "C:\\Users\\PC-1\\.nuget\\packages\\",
+        "outputPath": "C:\\BuildProject\\IdentityServerProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HungDangHong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,10 +44,6 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
             },
@@ -93,8 +92,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

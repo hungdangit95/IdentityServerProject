@@ -4,10 +4,13 @@
 
 using AutoMapper;
 using IdentityServer4;
+using IdentityServerAspNetIdentity.Contracts;
 using IdentityServerAspNetIdentity.Data;
+using IdentityServerAspNetIdentity.Implements;
 using IdentityServerAspNetIdentity.Mapper;
 using IdentityServerAspNetIdentity.Models;
 using IdentityServerAspNetIdentity.Services;
+using IdentityServerHost.Quickstart.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -52,6 +55,7 @@ namespace IdentityServerAspNetIdentity
                 .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
+                .AddTestUsers(TestUsers.Users)
                 .AddAspNetIdentity<ApplicationUser>();
 
             // not recommended for production - you need to store your key material somewhere secure
@@ -61,7 +65,7 @@ namespace IdentityServerAspNetIdentity
                 .AddGoogle(options =>
                 {
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-                    
+
                     // register your IdentityServer with Google at https://console.developers.google.com
                     // enable the Google+ API
                     // set the redirect URI to https://localhost:5001/signin-google
@@ -69,7 +73,8 @@ namespace IdentityServerAspNetIdentity
                     options.ClientSecret = "copy client secret from Google here";
                 });
             var mapper = WebMappingProfile.InitializeAutoMapper().CreateMapper();
-            container.RegisterInstance<IMapper>(mapper);
+            services.AddSingleton<IMapper>(mapper);
+            services.AddTransient<IAuthenticationService, AuthenticationService>();
         }
 
         public void Configure(IApplicationBuilder app)
