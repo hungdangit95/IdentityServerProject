@@ -266,10 +266,3 @@ Packages.props
 
 #Local Log Files
 log*.txt
-
-*.suo
-*.user
-_ReSharper.*
-bin
-obj
-packages
